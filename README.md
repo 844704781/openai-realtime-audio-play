@@ -1,12 +1,12 @@
 # openai-realtime-audio-play
 
-官方文档: https://platform.openai.com/docs/guides/realtime/overview
+openai doc: https://platform.openai.com/docs/guides/realtime/overview
 
 A few days ago, OpenAI opened the real-time interface, but found that the front-end of the audio data returned by OpenAI cannot be played directly. After researching the document, it was found that the audio data sent out needs to undergo floatTo16BitPCM conversion, and the official does not provide a corresponding method for converting 16 bit PCM to float. Therefore, I would like to make a supplement here
 
 前几天openai开放了realtime接口，但是发现openai返回的音频数据前端不能直接播放，经过研究文档发现，发出去的音频数据需要经过一次floatTo16BitPCM转换，而官方又没有提供对应16bit的pcm转float的方法，所以特在这里做个补充
 
-## 关键函数
+## main function
 
 ```javascript
         function pcm16ToFloat32(pcm16Data) {
@@ -19,9 +19,9 @@ A few days ago, OpenAI opened the real-time interface, but found that the front-
         }
 ```
 
-The complete code is as follows:
 
-## 完整的代码
+
+## all function:
 
 ```javascript
         function base64DecodeAudio(base64Data) {
